@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>mono/color</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="asvvvad">
+    <link rel="stylesheet" href="mono.css">
+    <link rel="stylesheet" href="color.css">
+    <style>
+        .example-grid .row {
+            /*stolen from skeleton for the time being*/
+            text-align: center;
+            font-size: .8em;
+            letter-spacing: .1rem;
+            margin: .8em 0;
+        }
+        
+        .example-grid .col {
+            background: var(--p);
+            color: var(--def);
+            padding: .3em;
+        }
+        
+        footer {
+            margin-top: 5rem;
+            padding: 3rem;
+            font-size: initial
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tacenter vh-100 default">
+        <div class="vc">
+            <h1 class="mega">mono/color</h1>
+            <p>Small, beautiful, dual-themed CSS framework</p>
+            <a class="btn pill ph primary" href="#intro"><b>Discover</b></a>
+            <a class="btn pill ph primary" href="https://github.com/asvvvad/mono-color"><b>Download</b></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1 id="intro">mono/color</h1>
+            <p>mono/color is a small, simple and beautiful CSS framework built with responsivity, readability, and a dual-theme in mind.</p>
+            <p>It's perfect for a blog or a documentation site and can be used for anything else aswell.<br>It's very responsive and looks neat on any resolution.<br>Based on <a href="https://github.com/any-code/starveling/">Starveling</a> and <a href="file:///home/asvvvad/Projects/Code/CSS/lit-master/docs/lit.html">lit</a>,
+                providing only necessary elements while still looking great and being customizable.</p>
+            <div>
+                <div class="bg-warning primary p rounded small black">
+                    The theme changes depending on the viewer's system theme by using CSS' prefers-color-scheme</code>
+                </div>
+                <p>mono/color is split into <em>two</em>:</p>
+                <div class="row">
+                    <div class="1 col card">
+                        <h2>mono <span class="rounded primary p04 nano">&lt;1.7kb</span></h2>
+                        <p>Includes dark & light theme with no colors. Only default html elements with a basic button. <a href="#mono">More.</a>
+                        </p>
+                    </div>
+                    <div class="1 col card bg-success white">
+                        <h2 class="white">color <span class="rounded bg-white p04 nano success">=1.9kb</span></h2>
+                        <p class="white">Adds <a href="#grid">grids</a>, <a href="#cards">cards</a>, <a href="colors">colors</a>, <a href="#utilities">utilities</a> and <a href="#badges">badges</a></p>
+                    </div>
+                </div>
+            </div>
+            <h1 id="mono">mono</h1>
+            <hr>
+            <h2 id="components">Container</h2>
+            <p>Containers add margin to the sides of your content and center it. This website has one main container and content wrapper that wraps everything.</p>
+            <div class="container">
+                <header class="">
+                    <h1>Header</h1>
+                    <nav class="">
+                        <a href="#">Home</a>
+                        <a href="#">Docs</a>
+                        <a href="#">About</a>
+                    </nav>
+                </header>
+                <hr>
+                <div class="content">
+                    <p>
+                        This is the content which is in the content wrapper of the container. It's meant for main content like an article. It's more indented than the container. On smaller screens, the container's margin will be removed so the horizontal line will touch the
+                        sides.
+                    </p>
+                    <hr>
+                </div>
+            </div>
+            <pre><code>&lt;div class="container"&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Header&lt;/h1&gt;
+        &lt;nav class=""&gt;
+            &lt;a href="#"&gt;Home&lt;/a&gt;
+            &lt;a href="#"&gt;Docs&lt;/a&gt;
+            &lt;a href="#"&gt;About&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;hr&gt;
+    &lt;div class="content"&gt;
+        &lt;p&gt;
+            This is the content which is in the content wrapper of the container. It's meant for main content like an
+            article.
+            It's more indented than the container. On smaller screens, the container's margin will be removed so the
+            horizontal line will touch the sides.
+        &lt;/p&gt;
+        &lt;hr&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            <h2 id="typography">Typography</h2>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+            <p>This is a paragraph. The font family is Courier New/monospace. For the headings 1 to 3 it's Serif</a>.
+                <b>Some bold text.</b> <i>Italics also looks nice.</i> You can <u>underline</u> things you feel are important. has styles that override the default heading styles, including margin.</p>
+            <pre><code>&lt;h1&gt;Heading&lt;/h1&gt;
+&lt;h2&gt;Heading&lt;/h2&gt;
+&lt;h3&gt;Heading&lt;/h3&gt;
+&lt;h2&gt;Heading&lt;/h2&gt;
+&lt;h5&gt;Heading&lt;/h5&gt;
+&lt;h6&gt;Heading&lt;/h6&gt;
+&lt;p&gt;This is a paragraph. The font family is Courier New/monospace.
+&lt;b&gt;Some bold text.&lt;/b&gt; &lt;i&gt;Italics also looks nice.&lt;/i&gt;
+You can &lt;u&gt;underline&lt;/u&gt; things you feel are important.
+mono has styles that override the default heading styles, including margin.&lt;/p&gt;</code></pre>
+            <h2 id="codeBlock">Code Block</h2>
+            <p><code>inline code;</code> <samp>inline samp;</samp> and kbd: <kbd>CTRL+C</kbd></p>
+            <p>Code blocks are code tags wrapped with pre tags. They automatically overflow to become scrollable on smaller displays</p>
+            <pre><code>&lt;pre&gt;&lt;code&gt;
+&lt;h2&gt;Code Block Example&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <p>Samp blocks are similar but intended for output moslty so mono/color sets the line-height tighter to show it better (for example, ascii art)</p>
+            <pre><samp>                /\  (hi i'm v dude)
+   __  ____  __/\/\__  __   ___
+  /  \/ __ \ \ _  _ / /  \ |   \
+ / /\ \__ \ \/\'  '/\/ /\ \|    | 
+/_/  \____/\__/\__/\__/  \_____/</samp></pre>
+            <h2>Blockquote</h2>
+            <blockquote>You're <em>not</em> a fucking moron if you use default browser styles you can do what ever the fuck you want who cares
+                <br><cite>&mdash; Eleanor Roosevelt</cite>
+                <blockquote>This is a nested quote
+                    <br><cite>&mdash; Me</cite>
+                    <blockquote>This is a nested quote inside a nested quote
+                        <br><cite>&mdash; Also me</cite></blockquote>
+                </blockquote>
+            </blockquote>
+            <br>
+            <h2 id="lists">Lists</h2>
+            <p>Lists are default HTML lists. I tried a few things but figured the defaults are all that's needed (imo).
+            </p>
+            <ul>
+                <li>First Item</li>
+                <li>
+                    Second Item
+                    <ul>
+                        <li>Sub Item 1</li>
+                        <li>Sub Item 2</li>
+                    </ul>
+                </li>
+                <li>Third Item</li>
+            </ul>
+            <h2 id="tables">Tables</h2>
+            <p>Tables looks nice too:</p>
+            <table>
+                <thead>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>email</th>
+                    <th>secondary email</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lorem Ipsum</td>
+                        <td>lorem</td>
+                        <td>email@example.com</td>
+                        <td>email@example.org</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem Ipsum</td>
+                        <td>lorem</td>
+                        <td>email@example.com</td>
+                        <td>email@example.org</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 id="forms">Forms</h2>
+            <p>Just like the code blocks the form is also scrollable when the elements take too much horizontal space
+                <br>There is also an option to use grids and the card class if you prefer. <br><a href="#color">color</a> have <code>w-100</code> and <code>w-50</code> classes to set the inputs to full and half width respectively.
+                <br>To get the connected inputs look use the <code>inline</code> class on the inputs just as in <a href="#inline-input">here</a>.</p>
+            <p>This is a regular HTML form:</p>
+            <form class="tacenter">
+                <label>Email<br>
+                    <input type="email" placeholder="email"><br>
+                    <input type="password" placeholder="password"><br>
+                    <label>Additional Info<br>
+                        <select>
+                            <option value="Option 1">Question</option>
+                            <option value="Option 2">Compliment</option>
+                            <option value="Option 3">Problem</option>
+                        </select>
+                    </label><br>
+                </label><br>
+                <textarea placeholder="Some information here" class="w-100"></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+            <h2 id="buttons">Buttons</h2>
+            <p>Buttons are created with either a button or an anchor that have <code>btn</code> class.</p>
+            <div>
+                <a class="btn" href="">Link button</a>
+                <button class="btn">Regular Button</button>
+                <p>Primary buttons are made with the <code>primary</code> class</p>
+                <button class="btn primary">Primary Button</button>
+            </div>
+            <h2>Horizontal Rules</h2>
+            <p>Horizontal Rules are useful for dividing up content. Their color is the same as same default border color which change with theme.</p>
+            <hr>
+            <h2>Extra</h2>
+            <p>Since mono support light and dark themes it also provide these two helper classes:</p>
+            <p><code>primary</code> class can be used on anything from buttons, inputs, divs, code ect. It's meant to be a <em>reverse</em> color.</p>
+            <div class="p mv primary">primary</div>
+            <p><code>default</code> class can be used on anything from buttons, inputs, divs, code ect. It's meant to be the <em>default</em> color.</p>
+            <div class="p mv default">default</div>
+            <p>Blockquotes with background can be made by adding <code>primary</code> or <code>default</code> or other
+                <a href="#colors">background colors</a> in <a href="#color">color</a></p>
+            <blockquote class="default">This is a blockquote with a background</blockquote><br>
+            <blockquote class="primary">This is a blockquote with a background</blockquote>
+            <h1 id="color">color</h1>
+            <hr>
+            <h2 id="grid">Grid</h2>
+            <p>Grids are defined on a 12 column scale. Each col will take up equal width if no width number is specified. They automatically collapse on mobile to take up the full viewport. Go ahead, try it!</p>
+            <div class="example-grid">
+                <div class="row">
+                    <div class="1 col">1 col</div>
+                    <div class="11 col">11 col</div>
+                </div>
+                <div class="row">
+                    <div class="2 col">2 col</div>
+                    <div class="10 col">10 col</div>
+                </div>
+                <div class="row">
+                    <div class="3 col">3 col</div>
+                    <div class="9 col">9 col</div>
+                </div>
+                <div class="row">
+                    <div class="4 col">4 col</div>
+                    <div class="8 col">8 col</div>
+                </div>
+                <div class="row">
+                    <div class="5 col">5 col</div>
+                    <div class="7 col">7 col</div>
+                </div>
+                <div class="row">
+                    <div class="6 col">6 col</div>
+                    <div class="6 col">6 col</div>
+                </div>
+            </div>
+            <h2 id="utilities">Utilities</h2>
+            <h3>Size classes:</h3>
+            <span class="mega">mega</span>
+            <span class="large">large</span>
+            <span class="normal">normal</span>
+            <span class="small">small</span>
+            <span class="nano">nano</span>
+            <h3>Spacing and alignment:</h3>
+            <div class="tacenter">tacenter</div>
+            <div class="taleft">taleft</div>
+            <div class="taright">taright</div>
+            <p>The above classes set the alignment of text within an element</p>
+            <div class="bg-info white p mv"><span class="m0">.m0</span></div>
+            <code>m0</code> Removes margins on all sides
+            <div class="bg-info white p mv"><span class="m">.m</span></div>
+            <code>m</code> Adds 1rem(10px) margin on all sides
+            <div class="bg-info white ph mv"><span class="mh">.mh</span><span class="mh">.mh</span></div>
+            <code>mh</code> Adds 1rem margin on the left and right sides<br>
+            <div class="bg-info white pv mv"><span class="mv">.mv</span></div>
+            <code>mv</code> Adds 1rem margin on the top and bottom sides<br>
+            <div class="bg-info white p mv">.p</div>
+            <code>p</code> Adds 1rem padding on all sides
+            <div class="bg-info white p04 mv">.p04</div>
+            <code>p04</code> Adds .04rem padding on all sides<br>
+            <div class="bg-info white ph mv">.ph</div>
+            <code>p</code> Adds 1rem padding on the left and right sides<br>
+            <div class="bg-info white ph04 mv">.ph04</div>
+            <code>p04</code> Adds .04rem padding on the left and right sides<br>
+            <div class="bg-info white pv mv">.pv</div>
+            <code>p</code> Adds 1rem padding on the top and bottom sides<br>
+            <div class="bg-info white pv04 mv">.pv04</div>
+            <code>p04</code> Adds .04rem padding on the top and bottom sides<br>
+            <input id="inline-input" class="bg-info white inline w-50 mv" placeholder="inline text input"><input class="bg-info white inline w-50" placeholder="inline text input"><br>
+            <code>inline</code> makes elements inline (stick to each other) by removing margins on both side
+            <div class="bg-info white w-100  p mv">w-100</div>
+            <div class="bg-info white w-50 p inline mv">w-50</div>
+            <div class="bg-info white w-50 p inline">w-50</div><br>
+            <code>w-100</code> and <code>w-50</code> sets the width to 100% and 50% respecitively
+            <div class="vh-100 mv p primary"><code>vh-100</code> takes the full width of it's container and the full height of it's screen. To use for full-page landing place it outside any
+                <code>container</code> div.
+                <div class="vc"><code>vc</code> class centers a div vertically in the full-page div</div>
+            </div>
+            <div id="colors">
+                <h3>Colors</h3>
+                <h2>Text Colors</h2>
+                <span class="ph accent">accent</span>
+                <span class="ph info">info</span>
+                <span class="ph success">success</span>
+                <span class="ph warning">warning</span>
+                <span class="ph error">error</span>
+                <span class="ph black bg-white">black</span>
+                <span class="ph white bg-black">white</span>
+                <span class="ph gray">gray</span>
+                <h2>Background Colors</h2>
+                <div class="p mv white bg-accent">bg-accent</div>
+                <div class="p mv white bg-info">bg-info</div>
+                <div class="p mv white bg-success">bg-success</div>
+                <div class="p mv white bg-warning">bg-warning</div>
+                <div class="p mv white bg-error">bg-error</div>
+                <div class="p mv white bg-black">bg-black</div>
+                <div class="p mv black bg-white">bg-white</div>
+                <div class="p mv black bg-gray">bg-gray</div>
+                <h2>Border Colors</h2>
+                <p>Since mono/color is borderless by default a add a border use <code class="border b-default">border</code> and a b-color like in these:</p>
+                <div class="p mv border b-accent">border b-accent</div>
+                <div class="p mv border b-info">border b-info</div>
+                <div class="p mv border b-success">border b-success</div>
+                <div class="p mv border b-warning">border b-warning</div>
+                <div class="p mv border b-error">border b-error</div>
+                <div class="p mv border b-black">border b-black</div>
+                <div class="p mv border b-white">border b-white</div>
+                <div class="p mv border b-gray">border b-gray</div>
+                <div class="p mv border b-primary">border b-primary</div>
+                <div class="p mv border b-default">border b-default</div>
+                <h5>Horizontal Rules</h5>
+                <p>border colors can be used for horizontal rules as well</p>
+                <hr class="b-accent">
+                <hr class="b-info">
+                <hr class="b-success">
+                <hr class="b-error">
+                <hr class="b-black">
+                <hr class="b-white">
+                <hr class="b-gray">
+                <hr class="b-primary">
+                <hr class="b-default">
+                <h2>Colorful Buttons</h2>
+                <p>These are made using the background colors classes <a href="#colors">above</a>. The ghost ones for example uses <code>accent</code> instead of <code>bg-accent</code>. <br>A primary button can have be a <i>ghost</i> button as well just
+                    by adding the color tag</p>
+                <button class="btn bg-accent white">Accent Button</button>
+                <button class="btn bg-info white">Info Button</button>
+                <button class="btn bg-success white">Success Button</button>
+                <button class="btn bg-warning white">Warning Button</button>
+                <button class="btn bg-error white">Error Button</button>
+                <h2>Ghost Buttons</h2>
+                <button class="btn accent">Accent Button</button>
+                <button class="btn info">Info Button</button>
+                <button class="btn success">Success Button</button>
+                <button class="btn warning">Warning Button</button>
+                <button class="btn error">Error Button</button>
+                <h2>Ghost Primary Buttons</h2>
+                <button class="btn primary accent">Accent Primary Button</button>
+                <button class="btn primary info">Info Primary Button</button>
+                <button class="btn primary success">Success Primary Button</button>
+                <button class="btn primary warning">Warning Primary Button</button>
+                <button class="btn primary error">Error Primary Button</button>
+                <h2>Rounded Buttons</h2>
+                <button class="rounded btn bg-accent white">Accent Button</button>
+                <button class="rounded btn bg-info white">Info Button</button>
+                <button class="rounded btn bg-success white">Success Button</button>
+                <button class="rounded btn bg-warning white">Warning Button</button>
+                <button class="rounded btn bg-error white">Error Button</button>
+                <br>
+                <button class="rounded btn accent">Accent Button</button>
+                <button class="rounded btn info">Info Button</button>
+                <button class="rounded btn success">Success Button</button>
+                <button class="rounded btn warning">Warning Button</button>
+                <button class="rounded btn error">Error Button</button>
+                <br>
+                <button class="rounded btn primary accent">Accent Primary Button</button>
+                <button class="rounded btn primary info">Info Primary Button</button>
+                <button class="rounded btn primary success">Success Primary Button</button>
+                <button class="rounded btn primary warning">Warning Primary Button</button>
+                <button class="rounded btn primary error">Error Primary Button</button>
+                <h2>Pill Buttons</h2>
+                <button class="pill btn bg-accent white">Accent Button</button>
+                <button class="pill btn bg-info white">Info Button</button>
+                <button class="pill btn bg-success white">Success Button</button>
+                <button class="pill btn bg-warning white">Warning Button</button>
+                <button class="pill btn bg-error white">Error Button</button>
+                <br>
+                <button class="pill btn accent">Accent Button</button>
+                <button class="pill btn info">Info Button</button>
+                <button class="pill btn success">Success Button</button>
+                <button class="pill btn warning">Warning Button</button>
+                <button class="pill btn error">Error Button</button>
+                <br>
+                <button class="pill btn primary accent">Accent Primary Button</button>
+                <button class="pill btn primary info">Info Primary Button</button>
+                <button class="pill btn primary success">Success Primary Button</button>
+                <button class="pill btn primary warning">Warning Primary Button</button>
+                <button class="pill btn primary error">Error Primary Button</button>
+                <h2 id="cards">Cards</h2>
+                <p>Cards can be used to display info in a concise and consistent manner. </p>
+                <div class="card bg-accent black">
+                    <h2 class="black">Simple Card</h2>
+                    <p>Here is some text that generally describes the card, or something about it.</p>
+                    <button class="btn primary">Okay</button>
+                    <button class="btn ">Cancel</button>
+                </div>
+                <p>Cards are usually nested within grids to create powerful display systems, like below.</p>
+                <div class="row">
+                    <div class="card col bg-info white">
+                        <h2 class="white">Card Title</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                        <button class="btn primary">Okay</button><button class="btn ">Cancel</button>
+                    </div>
+                    <div class="card col bg-warning black">
+                        <h2 class="black">Card Title</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                        <button class="btn primary">Okay</button><button class="btn secondary">Cancel</button>
+                    </div>
+                    <div class="card col bg-success white">
+                        <h2 class="white">Card Title</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                        <button class="btn primary">Okay</button><button class="btn secondary">Cancel</button>
+                    </div>
+                </div>
+
+                <div id="alerts">
+                    <h3>Alerts</h3>
+                    <p>These are easily created using a div that have a <a href="#colors">text & background color</a> class,
+                        <code>small</code> class to set the text size right (default is bigger and meant for increasing readability on content) and an extra <code>rounded</code> class if you wish.</p>
+                    <div class="bg-error white p rounded small">
+                        <span class="large">Oh no!</span><br>This is an example of an error alert
+                    </div><br>
+                    <div class="bg-success white p rounded small">
+                        <span class="large">Success!</span><br>This is an example of a success alert
+                    </div>
+                    <pre><code>&lt;div class="bg-error white p rounded small"&gt;
+    &lt;span class="large"&gt;Oh no!&lt;/span&gt;&lt;br&gt;This is an example of an error alert
+&lt;/div&gt;</code></pre>
+                    <div class="bg-warning primary p rounded small black">
+                        This is an example of a warning alert
+                    </div>
+                    <pre><code>&lt;div class="bg-warning primary p rounded small black"&gt;
+    This is an example of a warning alert
+&lt;/div&gt;</code></pre>
+                    <h3 id="using-blockquote">Using blockquote</h3>
+                    <p>As mentioned above in mono, blockquotes can be used along with other background colors.</p>
+                    <blockquote class="bg-info b-primary white small">This is an example of an info alert</blockquote>
+                    <pre><code>&lt;blockquote class="bg-info border b-primary white"&gt;This is an example of an info alert&lt;/blockquote&gt;</code></pre>
+                </div>
+                <div id="badges">
+                    <h3>Badges</h3>
+                    <p>Another small and helpful elements are <em>badges</em>.<br>As with <a href="#alerts">alerts</a>, they are made by combining a couple classes:</p>
+                    <h2>Heading Badge <span class="bg-warning white p04 rounded nano"> New!</span></h2>
+                    <pre><code>&lt;h4&gt;Heading Badge &lt;span class="bg-warning white p04 rounded small"&gt; New!&lt;/span&gt;&lt;/h4&gt;</code></pre>
+                    <button class="pill btn bg-info white">Button Badge <span
+                            class="bg-white info p04 rounded nano"><b>500</b></span></button>
+                    <pre><code>&lt;button class="pill btn bg-info white"&gt;Button Badge &lt;span class="bg-white info p04 rounded small"&gt;&lt;b&gt;500&lt;/b&gt;&lt;/span&gt;&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+
+        </div>
+        <footer class="default tacenter"><a href="https://github.com/asvvvad/mono-color">mono/color</a> by <a href="https://asvvvad.eu.org">asvvvad</a>/2020</footer>
+    </div>
+</body>
+
+</html>

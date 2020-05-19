@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: light) {
+     :root {
+        font-size: 62.5%;
+        --fg: #aaa;
+        --h: #efefef;
+        --bg: #000;
+        --b: #333;
+        --p: #eee;
+        --def: #121212;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+     :root {
+        font-size: 62.5%;
+        --fg: #555;
+        --h: #444;
+        --bg: #fefefe;
+        --b: #ccc;
+        --p: #000;
+        --def: #eee;
+    }
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 70.0rem;
+    margin: 0 auto;
+    font-size: 1.8rem
+}
+
+.content {
+    width: calc(100% - 5rem);
+    margin: auto;
+    overflow: hidden
+}
+
+@media (min-width: 420px) {
+    .container {
+        width: 90%;
+        padding: 0
+    }
+}
+
+body {
+    margin: 0;
+    line-height: 1.6;
+    font-family: monospace;
+    color: var(--fg);
+    background-color: var(--bg)
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    font-family: sans-serif;
+    color: var(--h)
+}
+
+a {
+    color: var(--p)
+}
+
+a:hover,
+.btn:hover,
+input[type=submit]:hover {
+    opacity: .6;
+    cursor: pointer
+}
+
+code,
+samp,
+kbd {
+    padding: .5rem;
+    font-style: italic;
+    font-size: 80%;
+    color: var(--fg);
+    background-color: var(--def);
+}
+
+input,
+textarea,
+select,
+pre>*,
+.btn {
+    border: 0 solid;
+    white-space: nowrap;
+    font-style: normal;
+    font-size: 83%;
+    font-family: monospace;
+    display: inline;
+    padding: 1rem;
+    margin: .5rem;
+    max-width: 100%;
+    color: var(--fg);
+    background-color: var(--def);
+    text-decoration: none;
+}
+
+textarea {
+    height: 15rem;
+    width: 70%;
+    white-space: pre-wrap
+}
+
+select {
+    padding: 0.9rem
+}
+
+pre>*,
+table {
+    display: block;
+    white-space: pre
+}
+
+pre>samp {
+    line-height: 1.1;
+}
+
+textarea,
+pre>*,
+table {
+    margin: .5rem 0
+}
+
+pre>*,
+table,
+form {
+    overflow: auto
+}
+
+table {
+    white-space: normal;
+    padding: 0;
+    font-size: 90%
+}
+
+blockquote {
+    white-space: normal;
+    padding: 1rem;
+    margin: 0;
+    border-left: .4rem solid var(--b);
+}
+
+form {
+    white-space: nowrap;
+    display: block
+}
+
+th,
+td {
+    padding: 1rem 1.1rem;
+    text-align: justify;
+    border-bottom: 0.1rem solid var(--b)
+}
+
+.primary {
+    background-color: var(--p);
+    color: var(--def)
+}
+
+.default {
+    background-color: var(--def);
+    color: var(--fg);
+}
+
+hr {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 0.1rem solid var(--b)
+}
