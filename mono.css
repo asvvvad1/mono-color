@@ -1,10 +1,8 @@
-/* mono/color v1.0 (https://github.com/asvvvad/mono-color) */
-/* by asvvvad (https://asvvvad.eu.org) under the MIT license*/
 * {
     box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
      :root {
         font-size: 62.5%;
         --fg: #aaa;
@@ -16,7 +14,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
      :root {
         font-size: 62.5%;
         --fg: #555;
