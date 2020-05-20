@@ -14,7 +14,7 @@ Can be used alone for simple pages it contains dark and light theme, basic html 
 Adds grids, cards, colors, utilities and badges
 
 ## Demo: [here](https://asvvvad.github.io/mono-color)
-
+>  #### The theme changes depending on the viewer's system theme by using CSS' prefers-color-scheme 
 ## Download: [here](https://github.com/asvvvad/mono-color/releases)
 
 ## Contributions:
