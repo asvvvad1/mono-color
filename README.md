@@ -7,10 +7,13 @@ Based on [Starveling](https://github.com/any-code/starveling/) and [lit](https:/
 
 ## mono/color is split into two:
 
-### mono
+### mono / 1.7kb minified (not gzipped)
 Can be used alone for simple pages it contains dark and light theme, basic html elements styling, and the .btn, .primary, .default class for anchor buttons and for reverse element theme
 
-### color
+### color / 1.9kb minified (not gzipped)
 Adds grids, cards, colors, utilities and badges
 
-## Demo: 
+## Demo: [here](https://asvvvad.github.io/mono-color)
+
+## Contributions:
+Any help or ideas on how to improve this are welcome! open an issue or a pull request ^^
