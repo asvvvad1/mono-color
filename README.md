@@ -15,5 +15,7 @@ Adds grids, cards, colors, utilities and badges
 
 ## Demo: [here](https://asvvvad.github.io/mono-color)
 
+## Download: [here](https://github.com/asvvvad/mono-color/releases)
+
 ## Contributions:
 Any help or ideas on how to improve this are welcome! open an issue or a pull request ^^
