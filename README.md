@@ -1,4 +1,6 @@
 # mono-color
+![GitHub All Releases](https://img.shields.io/github/downloads/asvvvad/mono-color/total) ![GitHub file size in bytes](https://img.shields.io/github/size/asvvvad/mono-color/mono.min.css?label=mono) ![GitHub file size in bytes](https://img.shields.io/github/size/asvvvad/mono-color/color.min.css?label=color)
+
 a small, simple and beautiful CSS framework built with responsivity, readability, and a dual-theme in mind.
 
 It's perfect for a blog or a documentation site and can be used for anything else aswell.
