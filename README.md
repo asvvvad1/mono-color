@@ -19,7 +19,7 @@ Adds grids, cards, colors, useful utilities and badges.
 Great for a simple documentation page or a web app.
 
 ## Demo: [here](https://asvvvad.github.io/mono-color)
->  #### The theme changes depending on the viewer's system theme by using CSS' prefers-color-scheme 
+
 ## Download: [here](https://github.com/asvvvad/mono-color/releases) or simply clone the latest release branch
 
 ## Contributions:
