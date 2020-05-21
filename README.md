@@ -4,7 +4,7 @@
 
 a small, simple and beautiful CSS framework built with responsivity, readability, and a dual-theme in mind.
 
-It's perfect for a blog or a documentation site and can be used for anything else aswell.
+It's perfect for a blog, a documentation site or a small web app. It can can be used for anything else as well.
 It's very responsive and looks neat on any resolution.
 Based on [Starveling](https://github.com/any-code/starveling/) and [lit](https://ajusa.github.io/lit/), providing only necessary elements while still looking great and customizable.
 
