@@ -96,12 +96,14 @@
                 providing only necessary elements while still looking great.</p>
             <p>mono/color is also hosted on Github and you can contribute to it or fork it and make your own style as you like!</p>
             <a class="github-button" href="https://github.com/asvvvad/mono-color" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" data-show-count="true" aria-label="Star asvvvad/mono-color on GitHub">Star</a>
-            <a class="github-button" href="https://github.com/asvvvad/mono-color/fork" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" data-show-count="true" aria-label="Fork asvvvad/mono-color on GitHub">Fork</a>            <div>
+            <a class="github-button" href="https://github.com/asvvvad/mono-color/fork" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" data-show-count="true" aria-label="Fork asvvvad/mono-color on GitHub">Fork</a>
+            <div>
                 <p>mono/color is split into <em>two</em>:</p>
                 <div class="row">
                     <div class="1 col card">
                         <h2 class="mv">mono<span class="nano">.css</span> <span class="rounded primary p04 small">1.5kb</span></h2>
-                        <h4 class="inline">dark<span class="nano">.css</span> <span class="rounded primary p04 nano">83b</span></h4> <h4 class="inline">light<span class="nano">.css</span> <span class="rounded primary p04 nano">83b</span></h4>
+                        <h4 class="inline">dark<span class="nano">.css</span> <span class="rounded primary p04 nano">83b</span></h4>
+                        <h4 class="inline">light<span class="nano">.css</span> <span class="rounded primary p04 nano">83b</span></h4>
                         <h5 class="mv">total <span class="rounded primary p04 nano">1.6kb</span></h5>
 
                         <p>Can be used alone, it includes dark & light theme with no colors, you can use only <a href="#one-theme">one theme</a> too. Only default html elements with a basic button.<br>Good for a simple responsive blog.
@@ -110,16 +112,18 @@
                     <div class="1 col card bg-success white">
                         <h2 class="white">color<span class="nano">.css</span> <span class="rounded bg-white p04 small success">1.9kb</span></h2>
                         <h5 class="mv">total <span class="rounded primary p04 bg-white success nano">3.5kb</span></h5>
-                        <p class="white">Adds <a href="#grid">grids</a>, <a href="#cards">cards</a>, <a href="#colors">colors</a>, <a href="#utilities">useful utilities</a> and <a href="#badges">badges</a>.<br>Great for a simple documentation page or a web app.</p></div>
+                        <p class="white">Adds <a href="#grid">grids</a>, <a href="#cards">cards</a>, <a href="#colors">colors</a>, <a href="#utilities">useful utilities</a> and <a href="#badges">badges</a>.<br>Great for a simple documentation page or a web app.</p>
+                    </div>
                 </div>
-                <div class="rounded p bg-warning small black mv"><span class="large">Note!</span><br>These are the minified sizes only and they're not gzipped. The sizes should be even smaller when compressed.</blockquote>
+            </div>
+            <div class="rounded p bg-warning small black mv"><span class="large">Note!</span><br>These are the minified sizes only and they're not gzipped. The sizes should be even smaller when compressed.</blockquote>
             </div>
             <hr>
             <h1 id="usage">Usage: </h1>
             <p>Light/Dark theming with mono/color is made easy! The themes are made into two separate CSS files so that you can use it the way you like!</p>
             <h2>Examples</h2>
             <h3>Automatic with fallback to light for unsupported browsers <span class="p04 small pill bg-success"><a class="white" target="_blank" href="https://caniuse.com/#feat=prefers-color-scheme">support</a></span></h3>
-            <p>It uses the new CSS media <code>prefers-color-scheme</code> which automatically sets the theme based on what the user have in their system.<br>
+            <p>It uses the new CSS media <code>prefers-color-scheme</code> which automatically sets the theme based on what the user have in their system.<br></p>
             <div class="bg-info white b-primary p rounded small"><span class="large">Tip!</span><br>Switch the <b>dark</b> in <b>(prefers-color-scheme: dark)</b> with <b>light</b> and <b>dark.css</b> with <b>light.css</b> to default the fallback to dark theme</div>
             <pre><code>&lt;link rel="stylesheet" href="light.css" media=""&gt;
 &lt;link rel="stylesheet" href="dark.css" media="(prefers-color-scheme: dark)"&gt;
@@ -150,21 +154,24 @@
             <h4 id="one-theme">Only one theme</h4>
             <p>You can always use a one theme by just linking its file only. You can also have multiple themes on different pages. Whatever you like :3</p>
             <h4 id="html-structure">Basic HTML structure</h4>
+            <h5>Without color:</h5>
+            <details>
             <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
-    &lt;head&gt;
-        &lt;meta charset="utf-8"&gt;
-        &lt;title&gt;my awesome webpage&lt;/title&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-        // or any of the above methods
-        &lt;link rel="stylesheet" href="light.css" media=""&gt;
-        &lt;link rel="stylesheet" href="dark.css" media="(prefers-color-scheme: dark)"&gt;
-        &lt;link rel="stylesheet" href="mono.css"&gt;
-        // optional
-        &lt;link rel="stylesheet" href="color.css"&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;div class="container"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;my awesome webpage&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;!-- or any of these methods: https://asvvvad.github.io/mono-color/#usage --&gt;
+    &lt;link rel="stylesheet" href="light.css" media=""&gt;
+    &lt;link rel="stylesheet" href="dark.css" media="(prefers-color-scheme: dark)"&gt;
+    &lt;link rel="stylesheet" href="mono.css"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="content"&gt;
             &lt;header&gt;
                 &lt;h1&gt;Header&lt;/h1&gt;
                 &lt;nav&gt;
@@ -173,19 +180,54 @@
                     &lt;a href="#"&gt;About&lt;/a&gt;
                 &lt;/nav&gt;
             &lt;/header&gt;
-            &lt;hr&gt;
-            &lt;div class="content"&gt;
-                &lt;p&gt;
-                This is the content which is inthe content wrapper of the container.
-                It's meant for main content like an article.
-                It's more indented than the container.
-                On smaller screens, the container's margin will be removed
-                so the horizontal line will touch the sides.
-                &lt;/p&gt;
-            &lt;/div&gt;
+            &lt;p&gt;
+                This is the content which is inthe content wrapper of the container. It's meant for main content like an article. It's more indented than the container. On smaller screens, the container's margin will be removed so the horizontal line will touch the sides.
+            &lt;/p&gt;
+            &lt;footer&gt;&lt;a href="https://github.com/asvvvad/mono-color"&gt;mono/color&lt;/a&gt; by &lt;a href="https://asvvvad.eu.org"&gt;asvvvad&lt;/a&gt;/2020&lt;/footer&gt;
         &lt;/div&gt;
-    &lt;/body&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+
 &lt;/html&gt;</code></pre>
+            </details>
+            <h5>With color:</h5>
+            <details>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;my awesome webpage&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;!-- or any of these methods: https://asvvvad.github.io/mono-color/#usage --&gt;
+    &lt;link rel="stylesheet" href="light.css" media=""&gt;
+    &lt;link rel="stylesheet" href="dark.css" media="(prefers-color-scheme: dark)"&gt;
+    &lt;link rel="stylesheet" href="mono.css"&gt;
+    &lt;link rel="stylesheet" href="color.css"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;header class="tacenter"&gt;
+            &lt;h1&gt;Header&lt;/h1&gt;
+            &lt;nav&gt;
+                &lt;a href="#"&gt;Home&lt;/a&gt;
+                &lt;a href="#"&gt;Docs&lt;/a&gt;
+                &lt;a href="#"&gt;About&lt;/a&gt;
+            &lt;/nav&gt;
+        &lt;/header&gt;
+        &lt;hr&gt;
+        &lt;div class="content"&gt;
+            &lt;p&gt;
+            This is the content which is inthe content wrapper of the container. It's meant for main content like an article. It's more indented than the container. On smaller screens, the container's margin will be removed so the horizontal line (and everything outside content) will touch the screen. It's recommended to center the text that's outside to prevent that.
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;footer class="default tacenter p"&gt;&lt;a href="https://github.com/asvvvad/mono-color"&gt;mono/color&lt;/a&gt; by &lt;a href="https://asvvvad.eu.org"&gt;asvvvad&lt;/a&gt;/2020&lt;/footer&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+            </details>
             <p>Now you can explore the components of each part. The container/content divs are neccessary if you want the page to be responsive and have your content centered</p>
             <h1>Components:</h1>
             <h1 id="mono">mono</h1>
@@ -193,16 +235,16 @@
             <h2 id="container">Container</h2>
             <p>Containers add margin to the sides of your content and center it. This website has one main container and content wrapper that wraps everything.</p>
             <div class="container">
-                <header class="">
-                    <h1>Header</h1>
-                    <nav class="">
-                        <a href="#">Home</a>
-                        <a href="#">Docs</a>
-                        <a href="#">About</a>
-                    </nav>
-                </header>
-                <hr>
                 <div class="content">
+                    <header class="">
+                        <h1>Header</h1>
+                        <nav class="">
+                            <a href="#">Home</a>
+                            <a href="#">Docs</a>
+                            <a href="#">About</a>
+                        </nav>
+                    </header>
+                    <hr>
                     <p>
                         This is the content which is in the content wrapper of the container. It's meant for main content like an article. It's more indented than the container. On smaller screens, the container's margin will be removed so the horizontal line will touch the
                         sides.
@@ -211,21 +253,18 @@
                 </div>
             </div>
             <pre><code>&lt;div class="container"&gt;
-    &lt;header&gt;
-        &lt;h1&gt;Header&lt;/h1&gt;
-        &lt;nav class=""&gt;
-            &lt;a href="#"&gt;Home&lt;/a&gt;
-            &lt;a href="#"&gt;Docs&lt;/a&gt;
-            &lt;a href="#"&gt;About&lt;/a&gt;
-        &lt;/nav&gt;
-    &lt;/header&gt;
-    &lt;hr&gt;
     &lt;div class="content"&gt;
+        &lt;header&gt;
+            &lt;h1&gt;Header&lt;/h1&gt;
+            &lt;nav class=""&gt;
+                &lt;a href="#"&gt;Home&lt;/a&gt;
+                &lt;a href="#"&gt;Docs&lt;/a&gt;
+                &lt;a href="#"&gt;About&lt;/a&gt;
+            &lt;/nav&gt;
+        &lt;/header&gt;
+        &lt;hr&gt;
         &lt;p&gt;
-            This is the content which is in the content wrapper of the container. It's meant for main content like an
-            article.
-            It's more indented than the container. On smaller screens, the container's margin will be removed so the
-            horizontal line will touch the sides.
+        This is the content which is inthe content wrapper of the container. It's meant for main content like an article. It's more indented than the container. On smaller screens, the container's margin will be removed so the horizontal line (and everything outside content) will touch the screen. It's recommended to center the text that's outside to prevent that.
         &lt;/p&gt;
         &lt;hr&gt;
     &lt;/div&gt;
@@ -495,20 +534,23 @@ mono has styles that override the default heading styles, including margin.&lt;/
                 <button class="pill btn bg-success white">Success Button</button>
                 <button class="pill btn bg-warning black">Warning Button</button>
                 <button class="pill btn bg-error white">Error Button</button>
-     
+
                 <h2>Ghost & Primary Ghost Buttons <span class="bg-error white small p04 pill">Not recommended</span></h2>
                 <details>
-                <div class="p bg-warning small black"><p>Ghost and Primary use the color and default background color of the theme so it may have a <b><em>low constrast</em></b> and it <em>changes</em> with the theme. They're meant to be <em><b>showcase only</b></em> maybe you'll like them or you'll have some use. If you want something <em><b>readable</b></em> use ones with a background color and the default & primary ones <em><b>without</b></em> custom text color. Use the toggle theme button to see.</p></div>
-                <button class="btn accent">Accent Ghost Button</button>
-                <button class="btn info">Info Ghost Button</button>
-                <button class="btn success">Success Ghost Button</button>
-                <button class="btn warning">Warning Ghost Button</button>
-                <button class="btn error">Error Ghost Button</button><br>
-                <button class="btn primary accent">Accent Primary Ghost Button</button>
-                <button class="btn primary info">Info Primary Ghost Button</button>
-                <button class="btn primary success">Success Primary Ghost Button</button>
-                <button class="btn primary warning">Warning Primary Ghos  Button</button>
-                <button class="btn primary error">Error Primary Button</button>
+                    <div class="p bg-warning small black">
+                        <p>Ghost and Primary use the color and default background color of the theme so it may have a <b><em>low constrast</em></b> and it <em>changes</em> with the theme. They're meant to be <em><b>showcase only</b></em> maybe you'll like
+                            them or you'll have some use. If you want something <em><b>readable</b></em> use ones with a background color and the default & primary ones <em><b>without</b></em> custom text color. Use the toggle theme button to see.</p>
+                    </div>
+                    <button class="btn accent">Accent Ghost Button</button>
+                    <button class="btn info">Info Ghost Button</button>
+                    <button class="btn success">Success Ghost Button</button>
+                    <button class="btn warning">Warning Ghost Button</button>
+                    <button class="btn error">Error Ghost Button</button><br>
+                    <button class="btn primary accent">Accent Primary Ghost Button</button>
+                    <button class="btn primary info">Info Primary Ghost Button</button>
+                    <button class="btn primary success">Success Primary Ghost Button</button>
+                    <button class="btn primary warning">Warning Primary Ghos  Button</button>
+                    <button class="btn primary error">Error Primary Button</button>
                 </details>
                 <h2 id="cards">Cards</h2>
                 <p>Cards can be used to display info in a concise and consistent manner. </p>
@@ -560,7 +602,7 @@ mono has styles that override the default heading styles, including margin.&lt;/
                     <p>As mentioned above in mono, blockquotes can be used along with other <a href="#background-colors">background colors</a>.</p>
                     <blockquote class="bg-info b-primary white small"><span class="large">Tip!</span><br>This is an example of an info alert</blockquote>
                     <pre><code>&lt;blockquote class="bg-info b-primary white"&gt;&lt;span class="large"&gt;Tip!&lt;/span&gt;&lt;br&gt;This is an example of an info alert&lt;/blockquote&gt;</code></pre>
-                    <blockquote class="bg-warning b-primary black small"><span class="large">Note!</span><br>Inline code or samps may not look nice inside of these alerts because of the reduced font-size (by using the <code>small</code> class) but that can be fixed by adding the <code class="normal">normal</code> class to the inline code.</blockquote>
+                    <blockquote class="bg-warning b-primary black small"><span class="large">Note!</span><br>Inline code or samps may not look nice inside of these alerts because of the reduced font-size (by using the <code>small</code> class) but that can be fixed by adding the <code class="normal">normal</code>                        class to the inline code.</blockquote>
                 </div>
                 <div id="badges">
                     <h3>Badges</h3>
@@ -573,9 +615,10 @@ mono has styles that override the default heading styles, including margin.&lt;/
                     <pre><code>&lt;button class="pill btn bg-info white"&gt;Button Badge &lt;span class="bg-white info p04 rounded nano"&gt;&lt;b&gt;500&lt;/b&gt;&lt;/span&gt;&lt;/button&gt;</code></pre>
                 </div>
             </div><br>
-            <div class="small">Phew! That was long. I'm making this in my free time to use personally but decided to make it available hoping it will help others. If you like it don't forget to join the <a href="https://github.com/asvvvad/mono-color/stargazers">Stargazers</a> ^^<br>If you find something with it or have suggestions don't hesitate to open an issue on <a href="https://github.com/asvvvad/mono-color/issues" target="_blank">Github.</a>
-    <footer class="default tacenter"><a href="https://github.com/asvvvad/mono-color">mono/color</a> by <a href="https://asvvvad.eu.org">asvvvad</a>/2020</footer>
-
+            <div class="small">Phew! That was long. I'm making this in my free time to use personally but decided to make it available hoping it will help others. If you like it don't forget to join the <a href="https://github.com/asvvvad/mono-color/stargazers">Stargazers</a>                ^^<br>If you find something with it or have suggestions don't hesitate to open an issue on <a href="https://github.com/asvvvad/mono-color/issues" target="_blank">Github.</a></div>
+        </div>
+        <footer class="default tacenter"><a href="https://github.com/asvvvad/mono-color">mono/color</a> by <a href="https://asvvvad.eu.org">asvvvad</a>/2020</footer>
+    </div>
 </body>
 
 </html>
