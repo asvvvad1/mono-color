@@ -66,7 +66,7 @@
 }
 
 .b-white {
-    border: #FFF;
+    border-color: #FFF;
 }
 
 .gray {
@@ -78,7 +78,7 @@
 }
 
 .b-gray {
-    border: var(--gray);
+    border-color: var(--gray);
 }
 
 .black {
@@ -90,15 +90,15 @@
 }
 
 .b-black {
-    border: #000;
+    border-color: #000;
 }
 
 .b-primary {
-    border: var(--p);
+    border-color: var(--p);
 }
 
 .b-default {
-    border: var(--b);
+    border-color: var(--b);
 }
 
 .accent {
@@ -110,7 +110,7 @@
 }
 
 .b-accent {
-    border: var(--accent);
+    border-color: var(--accent);
 }
 
 .warning {
@@ -122,7 +122,7 @@
 }
 
 .b-warning {
-    border: var(--warning);
+    border-color: var(--warning);
 }
 
 .error {
@@ -134,7 +134,7 @@
 }
 
 .b-error {
-    border: var(--error);
+    border-color: var(--error);
 }
 
 .success {
@@ -146,7 +146,7 @@
 }
 
 .b-success {
-    border: var(--success);
+    border-color: var(--success);
 }
 
 .info {
@@ -158,7 +158,7 @@
 }
 
 .b-info {
-    border: var(--info);
+    border-color: var(--info);
 }
 
 .inline {
@@ -179,7 +179,8 @@
 }
 
 .pill {
-    border-radius: 2rem
+    border-radius: 2rem;
+    white-space: nowrap;
 }
 
 .rounded {
@@ -203,7 +204,7 @@
 }
 
 .normal {
-    font-size: 1.8rem;
+    font-size: inherit;
 }
 
 .vh-100 {
@@ -270,8 +271,4 @@
 .border {
     border-style: solid;
     border-width: 0.1rem
-}
-
-.o50 {
-    opacity: 50%
 }

@@ -5,30 +5,6 @@
     box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-     :root {
-        font-size: 62.5%;
-        --fg: #aaa;
-        --h: #efefef;
-        --bg: #000;
-        --b: #333;
-        --p: #eee;
-        --def: #121212;
-    }
-}
-
-@media (prefers-color-scheme: light) {
-     :root {
-        font-size: 62.5%;
-        --fg: #555;
-        --h: #444;
-        --bg: #fefefe;
-        --b: #ccc;
-        --p: #000;
-        --def: #eee;
-    }
-}
-
 .container {
     position: relative;
     width: 100%;
@@ -73,18 +49,23 @@ a {
 a:hover,
 .btn:hover,
 input[type=submit]:hover {
-    opacity: .6;
+    opacity: .8;
     cursor: pointer
 }
 
 code,
 samp,
 kbd {
-    padding: .5rem;
-    font-style: italic;
+    padding: .4rem;
     font-size: 80%;
     color: var(--fg);
     background-color: var(--def);
+    white-space: nowrap;
+    border: solid .1rem var(--b);
+}
+kbd {
+    border-bottom: .3rem solid var(--b);
+    padding-bottom: .1rem
 }
 
 input,
@@ -92,10 +73,10 @@ textarea,
 select,
 pre>*,
 .btn {
-    border: 0 solid;
+    border: 0;
     white-space: nowrap;
     font-style: normal;
-    font-size: 83%;
+    font-size: 85%;
     font-family: monospace;
     display: inline;
     padding: 1rem;
@@ -108,7 +89,6 @@ pre>*,
 
 textarea {
     height: 15rem;
-    width: 70%;
     white-space: pre-wrap
 }
 
