@@ -2,7 +2,7 @@
    by asvvvad (https://asvvvad.eu.org) under the MIT license*/
 
 * {
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .container {
@@ -65,7 +65,7 @@ kbd {
 }
 kbd {
     border-bottom: .3rem solid var(--b);
-    padding-bottom: .1rem
+    padding-bottom: .2rem
 }
 
 input,
@@ -93,7 +93,7 @@ textarea {
 }
 
 select {
-    padding: 0.9rem
+    padding: .9rem
 }
 
 pre>*,
@@ -140,7 +140,7 @@ th,
 td {
     padding: 1rem 1.1rem;
     text-align: justify;
-    border-bottom: 0.1rem solid var(--b)
+    border-bottom: .1rem solid var(--b)
 }
 
 .primary {
@@ -156,5 +156,5 @@ td {
 hr {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
-    border: 0.1rem solid var(--b)
+    border: .1rem solid var(--b)
 }
