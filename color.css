@@ -1,13 +1,15 @@
-/* mono/color v1.1 (https://github.com/asvvvad/mono-color)
-   by asvvvad (https://asvvvad.eu.org) under the MIT license*/
+/*
+mono/color (https://github.com/asvvad/mono-color)
+Copyright (c) 2020 asvvvad - MIT License
+*/
 
 :root {
-    --gray: #CCC;
+    --gray: #ccc;
     --accent: #fa0;
     --warning: #ffd600;
     --error: #d50000;
     --success: #00c853;
-    --info: #2962ff;
+    --info: #2962ff
 }
 
 .card {
@@ -17,148 +19,142 @@
     color: var(--fg)
 }
 
-
-/* Grid */
-
 @media(min-width:45em) {
     .col {
-        display: table-cell;
+        display: table-cell
     }
     .\31 {
-        width: 5%;
+        width: 5%
     }
     .\33 {
-        width: 22%;
+        width: 22%
     }
     .\34 {
-        width: 30%;
+        width: 30%
     }
     .\35 {
-        width: 40%;
+        width: 40%
     }
     .\32 {
-        width: 15%;
+        width: 15%
     }
     .row {
         display: table;
-        border-spacing: 1em 0;
+        border-spacing: 1em 0
     }
 }
 
 .w-100,
 .row {
-    width: 100%;
+    width: 100%
 }
 
 .w-50 {
     width: 50%
 }
 
-
-/*Colors*/
-
 .white {
-    color: #FFF;
+    color: #fff
 }
 
 .bg-white {
-    background: #FFF;
+    background: #fff
 }
 
 .b-white {
-    border-color: #FFF;
+    border-color: #fff
 }
 
 .gray {
-    color: var(--gray);
+    color: var(--gray)
 }
 
 .bg-gray {
-    background: var(--gray);
+    background: var(--gray)
 }
 
 .b-gray {
-    border-color: var(--gray);
+    border-color: var(--gray)
 }
 
 .black {
-    color: #000;
+    color: #000
 }
 
 .bg-black {
-    background: #000;
+    background: #000
 }
 
 .b-black {
-    border-color: #000;
+    border-color: #000
 }
 
 .b-primary {
-    border-color: var(--p);
+    border-color: var(--p)
 }
 
 .b-default {
-    border-color: var(--b);
+    border-color: var(--b)
 }
 
 .accent {
-    color: var(--accent);
+    color: var(--accent)
 }
 
 .bg-accent {
-    background: var(--accent);
+    background: var(--accent)
 }
 
 .b-accent {
-    border-color: var(--accent);
+    border-color: var(--accent)
 }
 
 .warning {
-    color: var(--warning);
+    color: var(--warning)
 }
 
 .bg-warning {
-    background: var(--warning);
+    background: var(--warning)
 }
 
 .b-warning {
-    border-color: var(--warning);
+    border-color: var(--warning)
 }
 
 .error {
-    color: var(--error);
+    color: var(--error)
 }
 
 .bg-error {
-    background: var(--error);
+    background: var(--error)
 }
 
 .b-error {
-    border-color: var(--error);
+    border-color: var(--error)
 }
 
 .success {
-    color: var(--success);
+    color: var(--success)
 }
 
 .bg-success {
-    background: var(--success);
+    background: var(--success)
 }
 
 .b-success {
-    border-color: var(--success);
+    border-color: var(--success)
 }
 
 .info {
-    color: var(--info);
+    color: var(--info)
 }
 
 .bg-info {
-    background: var(--info);
+    background: var(--info)
 }
 
 .b-info {
-    border-color: var(--info);
+    border-color: var(--info)
 }
 
 .inline {
@@ -180,7 +176,7 @@
 
 .pill {
     border-radius: 2rem;
-    white-space: nowrap;
+    white-space: nowrap
 }
 
 .rounded {
@@ -204,7 +200,7 @@
 }
 
 .normal {
-    font-size: inherit;
+    font-size: inherit
 }
 
 .vh-100 {

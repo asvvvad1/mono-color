@@ -1,0 +1,4 @@
+vendor/
+composer.phar
+mono-only-*.zip
+monocolor-*.zip

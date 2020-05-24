@@ -1,0 +1,34 @@
+#! /usr/bin/env php
+<?php
+# This is the build script for mono/color.
+# Yes I could have used bash but I'm more comfortable with PHP scripting
+# Plus I can use the CSS minifiers available instead of downloading an executable
+# It's relatively easier for contributers as you're not forced to use a new editor like VS Code
+# which once I didnt want to use. Most linux distros come with php pre-installed too.
+
+require './vendor/autoload.php';
+
+// the framework version. used for release archives
+$version = "1.2";
+
+use tubalmartin\CssMin\Minifier as CSSmin;
+$compressor = new CSSmin;
+
+$files = [ "mono", "dark", "light", "color" ];
+
+// minify every css file mentioned above and save it with .min.css suffix
+echo "Minifying CSS ...\n";
+foreach ($files as $file) {
+    file_put_contents("$file.min.css", $compressor->run(file_get_contents("$file.css")));
+}
+
+# combine mono and color into a single css file for better gzipping
+echo "Making monocolor.min.css ...\n";
+file_put_contents("monocolor.min.css", file_get_contents("mono.min.css").file_get_contents("color.min.css"));
+
+# create the release zip files
+echo "Creating release archives ...\n";
+`zip mono-only-$version.zip mono.min.css light.min.css dark.min.css template-mono-only.html`;
+`zip monocolor-$version.zip mono.min.css light.min.css dark.min.css color.min.css template.html`;
+
+echo "Done.\n";

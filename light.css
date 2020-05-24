@@ -1,11 +1,14 @@
-/* mono/color v1.1 (https://github.com/asvvvad/mono-color)
-   by asvvvad (https://asvvvad.eu.org) under the MIT license*/
+/*
+mono/color (https://github.com/asvvad/mono-color)
+Copyright (c) 2020 asvvvad - MIT License
+*/
+
 :root {
     font-size: 62.5%;
-    --fg: #555; /* forground color */
-    --h: #444; /* headers color */
-    --bg: #fefefe; /* background color */
-    --b: #ccc; /* border color */
-    --p: #000; /* primary color */
-    --def: #eee; /* default color */
+    --fg: #555;
+    --h: #444;
+    --bg: #fefefe;
+    --b: #ccc;
+    --p: #000;
+    --def: #eee
 }
