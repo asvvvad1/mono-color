@@ -11,11 +11,11 @@ Based on [Starveling](https://github.com/any-code/starveling/) and [lit](https:/
 
 ## mono/color is split into two:
 
-### mono / 1.6kb minified (not gzipped, including both themes)
+### mono / 796b minified & gzipped, including both themes
 Can be used alone, it includes dark & light theme with no colors, you can use only one theme too. Only default html elements with a basic button.
 Good for a simple responsive blog. 
 
-### color / 1.9kb minified (not gzipped)
+### color / 1.3kb minified & gzipped, including mono and both themes
 Adds grids, cards, colors, useful utilities and badges.
 Great for a simple documentation page or a web app.
 
