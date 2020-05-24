@@ -1,6 +1,7 @@
 # mono-color
 ![GitHub All Releases](https://img.shields.io/github/downloads/asvvvad/mono-color/total) ![GitHub](https://img.shields.io/github/license/asvvvad/mono-color)
-![GitHub file size in bytes](https://img.shields.io/github/size/asvvvad/mono-color/mono.min.css?label=mono) ![GitHub file size in bytes](https://img.shields.io/github/size/asvvvad/mono-color/dark.min.css?label=dark) ![GitHub file size in bytes](https://img.shields.io/github/size/asvvvad/mono-color/light.min.css?label=light) ![GitHub file size in bytes](https://img.shields.io/github/size/asvvvad/mono-color/color.min.css?label=color)
+![GitHub file size in bytes](https://img.shields.io/badge/mono-630b-brightgreen)
+![GitHub file size in bytes](https://img.shields.io/badge/monocolor-1.3kb-brightgreen)
 
 a small, simple and beautiful CSS framework built with responsivity, readability, and a dual-theme in mind.
 
