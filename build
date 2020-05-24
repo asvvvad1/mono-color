@@ -23,12 +23,12 @@ foreach ($files as $file) {
 }
 
 # combine mono and color into a single css file for better gzipping
-echo "Making monocolor.min.css ...\n";
-file_put_contents("monocolor.min.css", file_get_contents("mono.min.css").file_get_contents("color.min.css"));
+echo "Making mono-color.min.css ...\n";
+file_put_contents("mono-color.min.css", file_get_contents("mono.min.css").file_get_contents("color.min.css"));
 
 # create the release zip files
 echo "Creating release archives ...\n";
 `zip mono-only-$version.zip mono.min.css light.min.css dark.min.css template-mono-only.html`;
-`zip monocolor-$version.zip mono.min.css light.min.css dark.min.css color.min.css template.html`;
+`zip mono-color-$version.zip mono.min.css light.min.css dark.min.css color.min.css template.html`;
 
 echo "Done.\n";
