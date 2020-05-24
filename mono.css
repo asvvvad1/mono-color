@@ -1,5 +1,7 @@
-/* mono/color v1.1 (https://github.com/asvvvad/mono-color)
-   by asvvvad (https://asvvvad.eu.org) under the MIT license*/
+/*
+mono/color (https://github.com/asvvad/mono-color)
+Copyright (c) 2020 asvvvad - MIT License
+*/
 
 * {
     box-sizing: border-box
@@ -8,7 +10,7 @@
 .container {
     position: relative;
     width: 100%;
-    max-width: 70.0rem;
+    max-width: 70rem;
     margin: 0 auto;
     font-size: 1.8rem
 }
@@ -19,7 +21,7 @@
     overflow: hidden
 }
 
-@media (min-width: 420px) {
+@media (min-width:420px) {
     .container {
         width: 90%;
         padding: 0
@@ -61,11 +63,12 @@ kbd {
     color: var(--fg);
     background-color: var(--def);
     white-space: nowrap;
-    border: solid .1rem var(--b);
+    border: solid .1rem var(--b)
 }
+
 kbd {
     border-bottom: .3rem solid var(--b);
-    padding-bottom: .2rem
+    padding: .3rem .4em
 }
 
 input,
@@ -84,7 +87,7 @@ pre>*,
     max-width: 100%;
     color: var(--fg);
     background-color: var(--def);
-    text-decoration: none;
+    text-decoration: none
 }
 
 textarea {
@@ -103,7 +106,7 @@ table {
 }
 
 pre>samp {
-    line-height: 1.1;
+    line-height: 1.1
 }
 
 textarea,
@@ -128,7 +131,7 @@ blockquote {
     white-space: normal;
     padding: 1rem;
     margin: 0;
-    border-left: .4rem solid var(--b);
+    border-left: .4rem solid var(--b)
 }
 
 form {
@@ -150,11 +153,9 @@ td {
 
 .default {
     background-color: var(--def);
-    color: var(--fg);
+    color: var(--fg)
 }
 
 hr {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
     border: .1rem solid var(--b)
 }
