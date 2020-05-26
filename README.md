@@ -19,7 +19,7 @@ Good for a simple responsive blog.
 Adds grids, cards, colors, useful utilities and badges.
 Great for a simple documentation page or a web app.
 
-## Demo: [here](https://asvvvad.github.io/mono-color)
+## Demo/Documentation: [here](https://asvvvad.github.io/mono-color)
 
 ## Download: [here](https://github.com/asvvvad/mono-color/releases) or simply clone the latest release branch
 
