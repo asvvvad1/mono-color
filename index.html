@@ -375,6 +375,7 @@ mono has styles that override the default heading styles, including margin.&lt;/
                     <textarea placeholder="Some information here" class="w-100"></textarea><br>
                     <input type="submit" value="Submit">
                 </form>
+                <p>See more in <a href="#forms-color">color</a></p>
                 <h2 id="buttons">Buttons</h2>
                 <p>Buttons are created with either a button or an anchor, they both must have the <code>btn</code> class.</p>
                 <div>
@@ -389,9 +390,9 @@ mono has styles that override the default heading styles, including margin.&lt;/
                 <h2>Extra</h2>
                 <p>Since mono support light and dark themes it also provide these two helper classes:</p>
                 <p><code>primary</code> class can be used on anything from buttons, inputs, divs, code ect. It's meant to be a <em>reverse</em> color.</p>
-                <div class="p mv primary">primary</div>
+                <div class="btn primary">primary</div>
                 <p><code>default</code> class can be used on anything from buttons, inputs, divs, code ect. It's meant to be the <em>default</em> color.</p>
-                <div class="p mv default">default</div>
+                <div class="btn default">default</div>
                 <p>Blockquotes with background can be made by adding <code>primary</code> or <code>default</code> or other
                     <a href="#colors">background colors</a> in <a href="#color">color</a> - It can also be used to make <a href="#alerts-using-blockquote">alerts</a></p>
                 <blockquote class="default">This is a blockquote with default background</blockquote><br>
@@ -480,26 +481,26 @@ mono has styles that override the default heading styles, including margin.&lt;/
                     <span class="ph white bg-black">white</span>
                     <span class="ph gray">gray</span>
                     <h2 id="background-colors">Background Colors</h2>
-                    <div class="p mv white bg-accent">bg-accent</div>
-                    <div class="p mv white bg-info">bg-info</div>
-                    <div class="p mv white bg-success">bg-success</div>
-                    <div class="p mv white bg-warning">bg-warning</div>
-                    <div class="p mv white bg-error">bg-error</div>
-                    <div class="p mv white bg-black">bg-black</div>
-                    <div class="p mv black bg-white">bg-white</div>
-                    <div class="p mv black bg-gray">bg-gray</div>
+                    <div class="btn white bg-accent">bg-accent</div>
+                    <div class="btn white bg-info">bg-info</div>
+                    <div class="btn white bg-success">bg-success</div>
+                    <div class="btn white bg-warning">bg-warning</div>
+                    <div class="btn white bg-error">bg-error</div>
+                    <div class="btn white bg-black">bg-black</div>
+                    <div class="btn black bg-white">bg-white</div>
+                    <div class="btn black bg-gray">bg-gray</div>
                     <h2>Border Colors</h2>
                     <p>Since mono/color is borderless by default a add a border use <code>border</code> and a b-color like in these:</p>
-                    <div class="p mv border b-accent">border b-accent</div>
-                    <div class="p mv border b-info">border b-info</div>
-                    <div class="p mv border b-success">border b-success</div>
-                    <div class="p mv border b-warning">border b-warning</div>
-                    <div class="p mv border b-error">border b-error</div>
-                    <div class="p mv border b-black">border b-black</div>
-                    <div class="p mv border b-white">border b-white</div>
-                    <div class="p mv border b-gray">border b-gray</div>
-                    <div class="p mv border b-primary">border b-primary</div>
-                    <div class="p mv border b-default">border b-default</div>
+                    <div class="btn border b-accent">border b-accent</div>
+                    <div class="btn border b-info">border b-info</div>
+                    <div class="btn border b-success">border b-success</div>
+                    <div class="btn border b-warning">border b-warning</div>
+                    <div class="btn border b-error">border b-error</div>
+                    <div class="btn border b-black">border b-black</div>
+                    <div class="btn border b-white">border b-white</div>
+                    <div class="btn border b-gray">border b-gray</div>
+                    <div class="btn border b-primary">border b-primary</div>
+                    <div class="btn border b-default">border b-default</div>
                     <h5 id="hr-colors">Horizontal Rules</h5>
                     <p>border colors can be used for horizontal rules as well</p>
                     <hr class="b-accent">
@@ -562,6 +563,18 @@ mono has styles that override the default heading styles, including margin.&lt;/
                         <button class="btn primary warning">Warning Primary Ghos  Button</button>
                         <button class="btn primary error">Error Primary Button</button>
                     </details>
+
+                    <h2 id="forms-color">More Forms</h2>
+                    <p>mono/color is built to be moduar so you can extend inputs just as easy as you extend buttons or anything else. Same classes are used to create round and colored form elements.</p>
+                    <form class="tacenter">
+                        <input type="text" class="rounded" placeholder="rounded input"><br>
+                        <input type="text" class="pill" placeholder="pill input"><br>
+                        <input type="text" class="primary" placeholder="primary input"><br>
+                        <input type="text" class="border b-success" placeholder="border b-success input"><br>
+                        <input type="text" class="border b-error" placeholder="border b-error input"><br>
+                        <textarea class="rounded bg-success white" placeholder="rounded bg-success white textarea"></textarea><br>
+                        <label>primary pill submit button<br><input type="submit" class="primary pill" value="Submit"></label>
+                    </form>
                     <h2 id="cards">Cards</h2>
                     <p>Cards can be used to display info in a concise and consistent manner. </p>
                     <div class="card bg-gray">
