@@ -21,6 +21,9 @@ Great for a simple documentation page or a web app.
 
 ## Demo/Documentation: [here](https://asvvvad.github.io/mono-color)
 
+## Showcase:
+[Stitch Micro-Framework Documentation](http://stitch.asvvvad.eu.org/)
+
 ## Download: [here](https://github.com/asvvvad/mono-color/releases) or simply clone the latest release branch
 
 ## Contributions:
